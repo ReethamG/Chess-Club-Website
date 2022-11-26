@@ -7,10 +7,9 @@
     <title>Pleasant Valley Chess Club</title>
 </head>
 <body>
-    <!-- {% block content %} -->
-    <form>
-        <!-- You can add classes for each input for more css customization (Rithwick) -->
-        <div class = "form-group">
+    {% block content %}
+    <form method = "POST" action = ''>
+        <!-- <div class = "form-group">
             <label for="username">Username:</label><br>
             <input type="text", placeholder="Username", name="username">
         </div>
@@ -27,8 +26,15 @@
 
         <div class = "form-group">
             <input type="submit", value="Submit">
-        </div>
+        </div> -->
+
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.email }}
+        {{ form.subscribe }}
+
     </form>
-    <!-- {% endblock %} -->
+    {% endblock %}
 </body>
 </html>
