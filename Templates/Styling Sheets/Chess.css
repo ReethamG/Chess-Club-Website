@@ -11,7 +11,18 @@
   transition: .5s ease;
   backface-visibility: hidden;
 }
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
 .middle {
   transition: .5s ease;
   opacity: 0;
