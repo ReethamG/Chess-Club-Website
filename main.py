@@ -69,7 +69,7 @@ def joinPage():
         new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
-        return redirect(url_for('home'))
+        # return redirect(url_for('home')) this is for redirecting
 
     return render_template("subscribe.html", form=form)
 
