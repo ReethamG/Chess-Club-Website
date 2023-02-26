@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+        <style>
+            a {
+                color: white !important;
+                font-size: 150% !important;
+                /* padding-left: 7px;
+                padding-right: 7px; */
+
+            }
+
+            a:hover{
+                background-color: #ebe7ff8a;
+                border-radius: 7px;
+            }
+
+            li {
+                margin-left: 5%;
+            }
+
+            .table-responsive::-webkit-scrollbar {
+                display: none;
+            }
+
+            .table-responsive {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 15px 15px;
+                margin: 7px 3px;
+                width: 100%;
+            }
+
+            #rows {
+                width: 100% !important;
+            }
+
+            #Poster {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            #title-list {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            #scroll-list {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            #meeting-imgs {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            #one-meeting-imgs {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            @media screen and (max-width: 512px) {
+                #Poster {
+                    width: 100% !important;
+                    padding: 0px !important;
+                    margin: 0px !important;
+                }
+
+                #cols {
+                    width: fit-content;
+                    padding: 0 !important;
+                }
+
+                #title-list {
+                    width: auto!important;
+                    padding: 0px !important;
+                    margin: 40px 15px 0px 15px !important;
+                }
+
+                #scroll-list {
+                    width: auto!important;
+                    margin: 0px 15px 0px 15px !important;
+                }
+
+                #rows {
+                    width: 100% !important;
+                    column-gap: 100% !important;
+                    padding: 0px !important;
+                    margin: 0px !important;
+                }
+
+                #meeting-imgs {
+                    margin-top: 10px;
+                    margin-bottom: 0 !important;
+                }
+
+                #one-meeting-imgs {
+                    margin-left: 10% !important;
+                    margin-top: 10px;
+                    margin-bottom: 0 !important;
+                }
+            }
+        </style>
+    </head>
+
+    {% load static %} <body style="background-image: url('../../media/images/Background.png'); font-family: 'Oswald'; padding: 0; margin: 0; overflow-x: hidden; width: auto;">
+        
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3d85c6ff; padding: 0; margin: 0; margin-bottom: 3%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div class="container" style="margin-left: 1%;">
+                {% load static %} <a href="/"><img src="../../media/images/chessClubLogo.png" style=" width: 80px"></a>
+                <a class="navbar-brand" href="/" style="margin-left: 1%; padding-left: 1px; padding-right: 1px;">The Pleasant Valley Chess Club</a>
+                
+                <button class="navbar-toggler" type="button" style="background-color: #3d85c6ff; width: 100%; margin-left: auto; margin-right: auto;" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 20%;">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/resources">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/opportunities">Opportunities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/join">Join</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about" style="width: 145%">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+        </nav>
+        
+        {% block page_content %}{% endblock %}
+        
+        <footer class="text-center" style="padding-bottom: 1%; background-color: #ebe7ff8a; padding-top: 6px; color: white; margin-top: 50px;">
+            <div class="container">
+                <a href="/" style="padding: 0 !important; padding-bottom: 20px !important; padding-top: 10px !important;"><img src="../../media/images/chessClubLogo.png" style="width: 80px;"></a>
+                <h5 style="font-size: 15px; margin-bottom: 20px">
+                    <a href="/">
+                        The Pleasant Valley Chess Club
+                    </a>
+                </h5>
+                <h5 style="font-size: 14px; margin-bottom: 10px">
+                    <a href="/">
+                        Home
+                    </a>
+                </h5>
+                <h5 style="font-size: 14px; margin-bottom: 10px">
+                    <a href="/resources">
+                        Resources
+                    </a>
+                </h5>
+                <h5 style="font-size: 14px; margin-bottom: 10px">
+                    <a href="/opportunities">
+                        Opportunities
+                    </a>
+                </h5>
+                <h5 style="font-size: 14px; margin-bottom: 10px">
+                    <a href="/join">
+                        Join the Club
+                    </a>
+                </h5>
+                <h5 style="font-size: 14px; margin-bottom: 10px">
+                    <a href="/about" style="width: 145%">
+                        About Us
+                    </a>
+                </h5>
+            </div>
+
+        </footer>
+        
+    </body>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

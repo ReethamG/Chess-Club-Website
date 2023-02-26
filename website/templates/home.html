@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="row" id="rows" style="margin-left: auto; margin-right: auto;">
+    <div class="col" id="cols">
+        <div class="container" style="margin: 0px; padding: 0px; width: auto;">
+            {% load static %} <img src="../../media/images/Poster.jpg" id="Poster" style="margin: 0 0 0 60px; width: 80%; border-color: white; border-width: 5px; border-style: solid;">
+            {% load static %} <img src="../../media/images/IM1.png" id="one-meeting-imgs" style="margin: 40px 0 40px 60px; width: 80%; border-color: white; border-width: 5px; border-style: solid;">
+
+        </div>
+    </div>
+    <div class="col" id="cols">
+        <div class="container" id="title-list" style="color:white; background-color: #3d85c6ff ; margin: 0px; padding: 0px; width: 80%; height: 64.9px; text-align: center; margin-left: 10%;">
+            <h6 style="font-size: 25px; padding-top: 15px; ">
+                Annoucements
+            </h6>
+        </div>
+        <div class="container" id="scroll-list"style=" margin: 0px; padding: 0px; background-color: #ffffffdb;  width: 80%; height: 22%; text-align: center; margin-left: 10%;">
+            <div class="table-responsive" style="overflow-y: scroll; overflow-x:hidden; width:100%; height: 100%; ">
+                <table class="table table-borderless">
+                    <thead>
+                        {% for annoucement in annoucements %}
+                            <tr>
+                                <th>
+                                    {{annoucement.message}}
+                                </th>
+                            </tr>
+                        {% endfor %}
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="container" id="title-list" style="color:white; background-color: #3d85c6ff ; margin: 0px; padding: 0px; width: 80%; height: 64.9px; text-align: center; margin-top: 40px; margin-left: 10%;">
+            <h6 style="font-size: 25px; padding-top: 15px; ">Upcoming Meetings</h6>
+        </div>
+        <div class="container" id="scroll-list"style=" margin: 0px; padding: 0px; background-color: #ffffffdb;  width: 80%; height: 19%; text-align: center; margin-left: 10%;">
+            <div class="table-responsive" style="overflow-y: scroll; overflow-x:hidden; width:100%; height: 100%; ">
+                <table class="table table-borderless">
+                    <thead>
+                        {% for meeting in meetings %}
+                            <tr>
+                                <th>
+                                    {{meeting.message}}
+                                </th>
+                            </tr>
+                        {% endfor %}
+                    </thead>
+                </table>
+            </div>
+        </div>
+        {% load static %} <img src="../../media/images/IM2.png" id="meeting-imgs" style="margin: 40px 0 40px 10%; width: 80%; border-color: white; border-width: 5px; border-style: solid;">
+    </div>
+</div> 
+{% endblock %}
