@@ -12,10 +12,6 @@ def home(request):
     }
     return render(request, 'home.html', context)
 
-def resources(request):
-    return render(request, 'resources.html', {})
-def opportunities(request):
-    return render(request, 'opportunities.html', {})
 def join(request):
     return render(request, 'join.html', {})
 
