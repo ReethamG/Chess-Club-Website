@@ -1,13 +1,13 @@
 from django.contrib import admin
 
 # Register your models here.
-from website.models import Annoucement, Meeting
+from website.models import Announcement, Meeting
 
-class AnnoucementAdmin(admin.ModelAdmin):
+class AnnouncementAdmin(admin.ModelAdmin):
     pass
 
 class MeetingAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Annoucement, AnnoucementAdmin)
+admin.site.register(Announcement, AnnouncementAdmin)
 admin.site.register(Meeting, MeetingAdmin)

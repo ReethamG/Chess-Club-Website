@@ -1,19 +1,16 @@
 from django.shortcuts import render
-from website.models import Annoucement, Meeting
+from website.models import Announcement, Meeting
 
 
 # Create your views here.
 def home(request):
-    annoucements = Annoucement.objects.all()
+    announcements = Announcement.objects.all()
     meetings = Meeting.objects.all()
     context = {
-        "annoucements": annoucements,
+        "announcements": announcements,
         "meetings": meetings,
     }
     return render(request, 'home.html', context)
-
-def join(request):
-    return render(request, 'join.html', {})
 
 def about_us(request):
     return render(request, 'about_us.html', {})
