@@ -9,3 +9,7 @@ Uses: Python, HTML, CSS, Bootstrap
 Created by:
 
 Abhinav Anthati
+
+Rithwick Lakshmanan
+
+Reetham Gubba
